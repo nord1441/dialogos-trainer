@@ -1,0 +1,53 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/nord1441/dialogos-trainer
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  enabled: false
+  className: nginx
+  hosts:
+    - host: dialogos-trainer.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "500m"
+
+env:
+  HOST: "0.0.0.0"
+  PORT: "3000"
+  DB_PATH: "/app/data/dialogos.db"
+  OLLAMA_BASE_URL: "http://ollama-service:11434"
+  ANTHROPIC_BASE_URL: "https://api.anthropic.com"
+  OPENAI_BASE_URL: "https://api.openai.com/v1"
+  GEMINI_BASE_URL: "https://generativelanguage.googleapis.com"
+
+secrets:
+  ANTHROPIC_API_KEY: ""
+  OPENAI_API_KEY: ""
+  GEMINI_API_KEY: ""
+
+persistence:
+  enabled: true
+  size: 1Gi
+  accessMode: ReadWriteOnce
+
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80

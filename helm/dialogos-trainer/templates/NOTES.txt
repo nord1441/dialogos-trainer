@@ -1,0 +1,10 @@
+Dialogos Trainer がデプロイされました。
+
+アプリケーションにアクセスするには:
+
+{{- if .Values.ingress.enabled }}
+  http://{{ (index .Values.ingress.hosts 0).host }}
+{{- else }}
+  kubectl port-forward svc/{{ include "dialogos-trainer.fullname" . }} 3000:{{ .Values.service.port }} -n {{ .Release.Namespace }}
+  ブラウザで http://localhost:3000 を開いてください
+{{- end }}

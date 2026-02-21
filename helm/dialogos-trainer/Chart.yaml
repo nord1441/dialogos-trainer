@@ -1,0 +1,6 @@
+apiVersion: v2
+name: dialogos-trainer
+description: AIペルソナとのコミュニケーショントレーニング用チャットアプリケーション
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

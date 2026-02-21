@@ -1,0 +1,22 @@
+.persona-card {
+  background: #fff;
+  border: 1px solid #c5cae9;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 13px;
+}
+
+.persona-card-row {
+  display: flex;
+  gap: 6px;
+}
+
+.persona-label {
+  font-weight: 600;
+  color: #3949ab;
+  white-space: nowrap;
+}

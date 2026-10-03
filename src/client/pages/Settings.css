@@ -1,0 +1,283 @@
+.settings-page {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+.settings-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-title {
+  font-size: 24px;
+  color: #1a1a2e;
+  margin-bottom: 24px;
+}
+
+.settings-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.settings-section h3 {
+  font-size: 16px;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.active-provider-select {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.active-provider-select label {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 160px;
+}
+
+.active-provider-select select,
+.active-provider-select input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.active-provider-select select:focus,
+.active-provider-select input:focus {
+  border-color: #3949ab;
+}
+
+.provider-section {
+  border-left: 4px solid #3949ab;
+}
+
+.provider-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.provider-header h3 {
+  margin-bottom: 0;
+}
+
+.provider-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.test-btn,
+.load-models-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.test-btn {
+  background: #e8eaf6;
+  color: #3949ab;
+  border-color: #c5cae9;
+}
+
+.test-btn:hover {
+  background: #c5cae9;
+}
+
+.load-models-btn {
+  color: #555;
+}
+
+.load-models-btn:hover {
+  background: #f0f0f0;
+}
+
+.test-btn:disabled,
+.load-models-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.connection-status.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.connection-status.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.status-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.provider-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.field-group label {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 160px;
+}
+
+.field-group input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.field-group input:focus {
+  border-color: #3949ab;
+}
+
+.models-list {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.models-list h4 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 6px;
+}
+
+.model-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.model-checkbox:hover {
+  background: #f5f5f5;
+}
+
+.model-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #3949ab;
+}
+
+.model-name {
+  word-break: break-all;
+}
+
+.selected-models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-model-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #e8eaf6;
+  color: #3949ab;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+}
+
+.selected-model-tag button {
+  background: none;
+  border: none;
+  color: #3949ab;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.save-btn {
+  padding: 10px 32px;
+  background: #3949ab;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background: #303f9f;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.save-message {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.save-message.success {
+  color: #2e7d32;
+}
+
+.save-message.error {
+  color: #c62828;
+}

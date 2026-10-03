@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dialogos-trainer-config
+  namespace: dialogos-trainer
+  labels:
+    app: dialogos-trainer
+data:
+  HOST: "0.0.0.0"
+  PORT: "3000"
+  DB_PATH: "/app/data/dialogos.db"
+  OLLAMA_BASE_URL: "http://ollama-service:11434"
+  ANTHROPIC_BASE_URL: "https://api.anthropic.com"
+  OPENAI_BASE_URL: "https://api.openai.com/v1"
+  GEMINI_BASE_URL: "https://generativelanguage.googleapis.com"
